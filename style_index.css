@@ -1,0 +1,851 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+
+body{
+    background-color: #D6D6D6;
+}
+
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #D6D6D6;
+    border-bottom: 5px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+nav{
+    padding-right: 3vw;
+}
+
+
+nav a {
+     font-size: 1.5vw; /* Adjust size as needed */
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: 800;
+}
+
+
+.spacer{
+    height: 10vh;
+}
+
+.spacer2{
+    height: 30vh;
+      width: 100%;
+    z-index: 0;
+}
+
+
+.logo-section {
+        background: url('img/logo.png');
+background-repeat: no-repeat;
+     background-position: center center;
+     background-size: contain;
+    width: 5vw;
+    height: 80%;
+    padding-left: 3vw;
+}
+
+
+
+
+
+
+
+
+.image-container {
+  width: 100vw;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+ position: relative;
+border-top: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+ 
+    
+    
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Initial semi-transparent overlay */
+    z-index: 1; /* Ensures overlay is above the image but below the text */
+    transition: background 0.5s; /* Smooth transition for the background */
+}
+
+.image-container:hover::before {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+
+
+
+.image-title {
+   text-align: center;
+ position: absolute;
+    transform: translate(0, +50%);
+    z-index: 2; /* Ensure the title is above the overlay */
+    color: #D6D6D6; /* Adjust as needed */
+    font-size: 2vw; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    width: 100%; /* Ensures the text is centered in the container */
+    font-family: "Space Mono", serif;
+    
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#image1 {
+background-image: url('img/Combo_Torino.png');
+  
+}
+
+#image2 {
+background-image: url('img/GDT.jpeg');
+
+}
+
+#image3 {
+background-image: url('img/GDT2.jpeg');
+   
+}
+
+
+
+
+
+#image1 { height: 70vh; } 
+#image2, #image3 { height: 10vh; } 
+
+
+.pin-container {
+  width: 100vw;
+  overflow: hidden; 
+    z-index: 2;
+}
+
+.draggable {
+  width: 7.8vw;
+  height: 10.3vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  cursor: grab; 
+}
+
+
+#drag0{
+     width: 20vw;
+  height: 15vw;
+     background: url('img/Move_us.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+#drag1{
+     background: url('img/caps_a.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+#drag2{
+     background: url('img/l_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag3{
+     background: url("img/e_1.png");
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+#drag4{
+     background: url('img/s_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag5{
+     background: url('img/a_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag6{
+     background: url('img/n_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag7{
+     background: url('img/d_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag8{
+     background: url('img/r_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag9{
+     background: url('img/o_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag10{
+     background: url('img/i_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag11{
+     background: url('img/t_1.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+#drag12{
+     background: url('img/caps_t.png');
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+
+#container {
+  width: 100vw;
+  height: 90vh;
+  background-color: #D6D6D6;
+  position: relative;
+    z-index: 2;
+}
+
+.introduction p {
+    font-family: "Space Mono", serif;
+    margin: 0;
+    font-size: 10.3vw;
+    padding-top: 3vw;
+    margin-left: 3vw;
+}
+
+.scroll_down{
+    width: 2vw;
+    height: 2vw;
+     background: url('img/Scroll_down.png');
+    background-size: contain;
+background-repeat: no-repeat;
+    position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+   
+}
+
+#sections {
+  background-color: #D6D6D6;
+  width: 100%;
+ border-top: 5px solid black;
+     border-bottom: 2.5px solid black;
+  overflow: auto; 
+    position: relative;
+    z-index: 2;
+}
+
+
+
+#sections2 {
+  background-color: #D6D6D6;
+  width: 80%;
+
+  overflow: auto; 
+    position: relative;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+#sections1 {
+  background-color: #D6D6D6;
+  width: 20%;
+ float: centerx;
+      
+   
+}
+
+.centered-text {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    font-size: 1.5vw; /* Adjust size as needed */
+   
+    color: black; /* Adjust color as needed */
+    font-family: "Space Mono", serif;
+}
+
+
+.left-title {
+    display: flex;
+ 
+   
+    height: 100%;
+    width: 100%;
+    font-size: 1.5vw; /* Adjust size as needed */
+    font-weight: bold;
+   
+    color: black; /* Adjust color as needed */
+    font-family: "Space Mono", serif;
+}
+
+
+
+#section1 {
+
+-webkit-box-sizing: border-box;
+   
+        
+      
+        z-index: 1;
+    width: 20%; 
+    height: 100%; 
+    background-color: #D6D6D6;
+    float: left;
+    padding: 5%;
+}
+
+
+
+#section2 {
+
+-webkit-box-sizing: border-box;
+   
+        
+      
+        z-index: 1;
+    width: 80%; 
+    height: 100%; 
+    background-color: #D6D6D6;
+    float: left;
+    padding: 5%;
+}
+
+
+
+
+
+
+footer {
+     display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 30vh; 
+    background-color: #D6D6D6;
+    z-index: 1; 
+     border-top: 2.5px solid black;
+}
+
+
+
+
+
+
+
+
+
+#footer_1 {
+  
+       width: 20%;
+     padding-left: 5%;
+  padding-top: 4%;
+ 
+    
+}
+
+#footer_1 a {
+font-size: 1.3vw; /* Adjust size as needed */
+    display: flex;
+     width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: bold;
+     align-items: center;
+}
+
+
+#footer_1 p {
+     font-size: 1.3vw; /* Adjust size as needed */
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: bold;
+}
+
+
+
+
+#footer_2 {
+  padding-left: 5%;
+       width: 20%;
+padding-top: 4%;
+}
+
+#footer_2 a {
+    font-size: 1.3vw; /* Adjust size as needed */
+    display: flex;
+     width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: bold;
+}
+
+
+#footer_2 p {
+    font-size:1.3vw; /* Adjust size as needed */
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: bold;
+}
+
+
+
+
+
+#footer_3 {
+  padding-left: 5%;
+      padding-right: 5%;
+       width: 60%;
+    padding-top: 4%;
+    
+   
+}
+
+
+
+
+#footer_3 p {
+     font-size:1.3vw; /* Adjust size as needed */
+    color: black;
+    padding: 0 15px;
+     font-family: "Space Mono";
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+body a:hover{
+    text-decoration: underline;
+}
+
+#footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linked-section {
+    width: 100%;
+    height: 30vh; /* Adjust height as needed */
+    border-bottom: 2.5px solid black;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.linked-section a {
+    display: block;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#linked-section1 a { background-image: url('img/Combo_Torino.png'); }
+#linked-section2 a { background-image: url('img/GDT.jpeg'); }
+#linked-section3 a { background-image: url('img/GDT2.jpeg'); }
+/* #linked-section4 a { background-image: url('image1.png'); } */
+/* #linked-section5 a { background-image: url('image2.png'); } */
+#linked-section4 a { background-color: black; } 
+#linked-section5 a { background-color: black; } 
+
+.linked-section a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black semi-transparent overlay */
+    z-index: 1;
+     transition: background 0.5s; /* Smooth transition for the background */
+}
+
+.linked-section a:hover::before {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+
+.works-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Ensure it's above the overlay */
+    color: #D6D6D6; /* Adjust text color as needed */
+    font-size: 2vw; /* Adjust font size as needed */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-family: "Space Mono", serif;
+}
+
+.works{
+    padding-bottom: 5%;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-container {
+  width: 100%;
+    height: 80vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+ position: relative;
+
+ background-image: url(img/about_img.png);
+    z-index: 2;
+    
+    
+}
+
+
+
+#about-sections {
+  background-color: #D6D6D6;
+  width: 100%;
+     border-bottom: 2.5px solid black;
+  overflow: auto; 
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.full-width-image {
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+    margin-bottom: 5%; /* Adds a bottom margin to create a gap */
+}
+
+#imageA {
+    background-image: url('img/Combo_Torino.png');
+}
+
+#imageB {
+ background-image: url('img/Combo_Torino.png');
+}
+
+#imageC {
+  background-image: url('img/Combo_Torino.png');
+}
+
+#imageD {
+    background-image: url('img/Combo_Torino.png');
+}
+
+#imageE {
+    background-image: url('img/Combo_Torino.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media (min-width: 600px) and (max-width: 992px) {
+     
+#container {
+
+  height: 70vh;
+  
+}
+    
+    
+    #footer a {
+      font-size:1.7vw; /* Adjust size as needed */
+}
+    
+     #footer p {
+      font-size:1.7vw; /* Adjust size as needed */
+}
+
+    .image-title {
+  transform: translate(0, +90%);
+    font-size:2.3vw; /* Adjust as needed */    
+    
+}
+    
+        .works-title {
+   
+    font-size: 2.3vw; /* Adjust font size as needed */
+   
+}
+
+    .centered-text {
+   
+    font-size: 1.7vw; /* Adjust size as needed */
+   
+   
+}
+
+
+.left-title {
+  
+    font-size: 1.7vw; /* Adjust size as needed */
+
+}
+    
+nav a {
+     font-size: 1.7vw; /* Adjust size as needed */
+}
+
+    
+    header{
+        padding-left: 2%;
+  
+    }
+    
+    
+    .profile-container {
+
+    height: 60vh;
+
+    
+    
+}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 599px) {
+  
+    
+#container {
+
+  height: 50vh;
+  
+}
+    
+    
+    #footer a {
+      font-size: 2.2vw; /* Adjust size as needed */
+}
+    
+     #footer p {
+      font-size: 2.2vw; /* Adjust size as needed */
+}
+
+    .image-title {
+  transform: translate(0, +90%);
+    font-size: 3.2vw; /* Adjust as needed */    
+    
+}
+
+    .centered-text {
+   
+    font-size: 2.2vw; /* Adjust size as needed */
+   
+   
+}
+
+
+.left-title {
+  
+    font-size: 2.2vw; /* Adjust size as needed */
+
+}
+    
+nav a {
+     font-size: 2.2vw; /* Adjust size as needed */
+}
+
+    
+    header{
+        padding-left: 2%;
+  
+    }
+    .works-title {
+   
+    font-size: 3.2vw; /* Adjust font size as needed */
+   
+}
+
+    
+}
+
+
+
+
+    
+
+    
+    
+
+
+
+
+
+/*
+
+TENTATIVO PROF
+#image1 { height: 80vh; } 
+#image2, #image3 { height: 10vh; } 
+*/
+
+/*
+.image-container {
+    height: 10vh;
+    transition: all ease-in-out 0.5s;
+}
+
+.image-container.active {
+    height: 80vh;
+}
+
+.pin-container {
+  width: 100vw;
+  overflow: hidden; 
+}
+*/
